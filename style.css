@@ -753,42 +753,43 @@ span {
   header {
     padding: 2rem 3%;
   }
-}
-section {
-  padding: 10rem 3% 2rem;
-}
-.timeline-items::before {
-  left: 7px;
-}
-.timeline-item:nth-child(odd) {
-  padding-right: 0;
-  text-align: left;
-}
-.timeline-item:nth-child(odd),
-.timeline-item:nth-child(even) {
-  padding-left: 37px;
-}
-.timeline-dot {
-  left: 0;
-}
 
-.servies {
-  padding-bottom: 7rem;
-}
-.testimonials .wrapper {
-  grid-template-columns: repeat(1, 1fr);
-}
-.contact form {
-  flex-direction: column;
-}
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .timeline-items::before {
+    left: 7px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
 
-.footer {
-  padding: 2rem 3%;
-}
+  .servies {
+    padding-bottom: 7rem;
+  }
+  .testimonials .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact form {
+    flex-direction: column;
+  }
 
-@media (max-width: 895px) {
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 844px) {
   #menu-icon {
     display: block;
+    cursor: pointer;
   }
 
   .navbar {
@@ -822,7 +823,7 @@ section {
     font-size: 2.6rem;
   }
   .home-content h1 {
-    font-size: 8rem;
+    font-size: 4rem;
     margin-top: -7rem;
   }
   .home-content p {
@@ -837,5 +838,22 @@ section {
   }
   .services-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading {
+    font-size: 3rem; /* Ukuran font untuk heading section */
+  }
+  .heading span {
+    font-size: 3.5rem; /* Ukuran font untuk span di dalam heading, sesuaikan jika diperlukan */
+  }
+
+  .contact h2 {
+    font-size: 3rem; /* Ukuran font untuk heading Contact Me */
+  }
+
+  .testimonials .heading,
+  .services h2,
+  .education h2 {
+    font-size: 3rem; /* Ukuran font untuk heading section */
   }
 }
