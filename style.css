@@ -24,6 +24,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .header {
@@ -855,5 +856,131 @@ span {
   .services h2,
   .education h2 {
     font-size: 3rem; /* Ukuran font untuk heading section */
+  }
+}
+
+@media (max-width: 430px) {
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+    margin-top: -7rem;
+  }
+  .home-content p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .home-img img {
+    width: 56vw;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading {
+    font-size: 3rem; /* Ukuran font untuk heading section */
+  }
+  .heading span {
+    font-size: 3.5rem; /* Ukuran font untuk span di dalam heading, sesuaikan jika diperlukan */
+  }
+
+  .contact h2 {
+    font-size: 3rem; /* Ukuran font untuk heading Contact Me */
+  }
+
+  .testimonials .heading,
+  .services h2,
+  .education h2,
+  .contact h2 {
+    font-size: 4rem; /* Ukuran font untuk heading section */
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .footer .list {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Atur jarak antar item sesuai keinginan */
+    padding: 5;
+    margin: 10;
+    list-style: none;
+    font-size: 1.3rem;
+  }
+
+  .footer .social {
+    text-align: center;
+    padding-bottom: 35px;
+    color: var(--main-color);
+  }
+
+  .footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+
+  .service-info h4 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .service-info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.5;
+    margin: auto;
+  }
+
+  .service-box .service-info h4,
+  .service-box .service-info p {
+    padding-top: -10rem;
+  }
+  .timeline-content h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 800;
   }
 }
