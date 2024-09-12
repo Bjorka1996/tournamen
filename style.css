@@ -71,13 +71,34 @@ body {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
-
+/*-------------------------------------------------------------------*/
 #menu-icon {
-  font-size: 3.6rem;
-  color: var(--main-color);
-  display: none;
+  font-size: 3.6rem; /* Ukuran font untuk ikon menu */
+  color: var(--main-color); /* Warna utama */
+  cursor: pointer; /* Menambahkan kursor pointer */
+  transition: transform 0.5s ease; /* Animasi smooth untuk transformasi */
+  display: none; /* Sembunyikan secara default jika tidak dalam mode mobile */
 }
 
+/* Animasi untuk ikon menu */
+.bx-menu {
+  position: relative;
+  display: block;
+  transition: all 0.5s ease; /* Animasi smooth untuk perubahan */
+}
+
+.bx-x {
+  transform: rotate(180deg); /* Rotasi ketika ikon berubah menjadi X */
+  transition: transform 0.5s ease; /* Efek transisi smooth untuk rotasi */
+}
+
+/* Tambahkan efek hover */
+#menu-icon:hover {
+  transform: scale(1.2); /* Membesarkan ikon saat hover */
+  transition: transform 0.3s ease; /* Animasi smooth saat hover */
+}
+
+/*-------------------------------------------------------------------*/
 section {
   min-height: 100vh;
   padding: 10rem 12% 10rem;
@@ -856,6 +877,23 @@ span {
   .services h2,
   .education h2 {
     font-size: 3rem; /* Ukuran font untuk heading section */
+  }
+
+  .footer .list {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Atur jarak antar item sesuai keinginan */
+    padding: 5;
+    margin: 10;
+    list-style: none;
+    font-size: 1.8rem;
+  }
+
+  .footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 9px;
+    color: white;
   }
 }
 
