@@ -9,6 +9,12 @@ function closeNavbar() {
   navbar.classList.remove("active");
 }
 
+// Fungsi untuk membuka/menutup navbar
+function toggleNavbar() {
+  menuicon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+}
+
 // Mengatur scroll untuk menandai tautan aktif
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -27,14 +33,16 @@ window.onscroll = () => {
 };
 
 // Mengatur klik pada ikon menu
-menuicon.onclick = () => {
-  menuicon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+menuicon.onclick = toggleNavbar;
 
 // Menutup navbar ketika klik di luar
 document.addEventListener("click", (event) => {
   if (!navbar.contains(event.target) && !menuicon.contains(event.target) && navbar.classList.contains("active")) {
     closeNavbar();
   }
+});
+
+// Menutup navbar saat link navigasi diklik (untuk mode mobile)
+navlinks.forEach((link) => {
+  link.addEventListener("click", closeNavbar);
 });
